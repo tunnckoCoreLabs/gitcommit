@@ -1,6 +1,6 @@
 {
   "name": "gitcommit",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Simple, small and stable helper & prompter for submitting conventional commits",
   "repository": "tunnckoCore/gitcommit",
   "author": "Charlike Mike Reagent (https://charlike.online)",
