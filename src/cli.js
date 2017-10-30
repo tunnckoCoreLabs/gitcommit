@@ -46,7 +46,8 @@ app
   .then((answers) => {
     const answer = answers.reduce((acc, x) => Object.assign({}, acc, x), {});
     const args = gitcommit(answer);
+    const command = ['git commit'].concat(args).join(' ');
 
-    return execa('git', ['commit'].concat(args));
+    return execa.shell(command);
   }, onerror)
   .catch(onerror);
