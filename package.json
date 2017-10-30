@@ -1,0 +1,68 @@
+{
+  "name": "gitcommit",
+  "version": "0.2.1",
+  "description": "Simple, small and stable helper & prompter for submitting conventional commits",
+  "repository": "tunnckoCore/gitcommit",
+  "author": "Charlike Mike Reagent (https://charlike.online)",
+  "nspId": "todo",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "hela",
+    "test": "yarn start test",
+    "precommit": "yarn start precommit",
+    "commit": "yarn start commit"
+  },
+  "license": "Apache-2.0",
+  "licenseStart": 2017,
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5",
+    "yarn": ">=1"
+  },
+  "bin": {
+    "gitcommit": "./src/cli.js"
+  },
+  "files": [
+    "src/"
+  ],
+  "dependencies": {
+    "asky": "0.2.2",
+    "execa": "0.8.0"
+  },
+  "devDependencies": {
+    "hela": "*",
+    "hela-config-tunnckocore": "*",
+    "mukla": "0.4.9"
+  },
+  "keywords": [
+    "automation"
+  ],
+  "verb": {
+    "run": true,
+    "toc": {
+      "render": true,
+      "method": "preWrite",
+      "maxdepth": 3
+    },
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "related": {
+      "list": [
+        "asky",
+        "p-map-series",
+        "execa",
+        "hela"
+      ],
+      "highlight": "asky"
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": []
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  }
+}

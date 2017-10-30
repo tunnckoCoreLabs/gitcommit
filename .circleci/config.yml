@@ -1,0 +1,93 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/gitcommit
+  docker:
+    - image: circleci/node:8
+
+restore_modules_cache: &restore_modules_cache
+  restore_cache:
+    keys:
+    - gitcommit-{{ checksum "yarn.lock" }}
+    # fallback to using the latest cache if no exact match is found
+    - gitcommit-
+
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_modules_cache
+      - run:
+          name: Installing Dependencies
+          command: yarn install
+      - save_cache:
+          key: gitcommit-{{ checksum "yarn.lock" }}
+          paths: node_modules
+      - run:
+          name: Remove node_modules to cleanup workspace
+          command: rm -rf node_modules
+
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_modules_cache
+      - run:
+          name: Running tests and checks
+          command: yarn test
+      - run:
+          name: Sending test coverage to CodeCov
+          command: bash <(curl -s https://codecov.io/bash)
+
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_modules_cache
+      - run:
+          name: Creating distributable files
+          command: echo ok
+      - store_artifacts:
+          path: dist
+          destination: gitcommit
+
+  # TODO: uncomment when ready
+  # publish:
+  #   <<: *defaults
+  #   steps:
+  #     - checkout
+  #     - *restore_modules_cache
+  #     - run:
+  #         name: Adding NPM auth token
+  #         command: |
+  #           # Foobie comment.
+  #           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+  #     - run:
+  #         name: Releasing to NPM and GitHub
+  #         command: yarn start release
+
+workflows:
+  version: 2
+  automated:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
+      - build:
+          requires:
+            - install
+            - test
+      # TODO: uncomment when ready
+      # - publish:
+      #     filters:
+      #      branches:
+      #        only:
+      #          - master
+      #     context: org-global
+      #     requires:
+      #       - install
+      #       - test
+      #       - build
