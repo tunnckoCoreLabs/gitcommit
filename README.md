@@ -142,8 +142,8 @@ _Project scaffolded and managed with [hela][]._
 [prettier-url]: https://github.com/prettier/prettier
 [prettier-img]: https://img.shields.io/badge/styled_with-prettier-f952a5.svg
 
-[nodesecurity-url]: https://nodesecurity.io/orgs/tunnckocore/projects/todo/master
-[nodesecurity-img]: https://nodesecurity.io/orgs/tunnckocore/projects/todo/badge
+[nodesecurity-url]: https://nodesecurity.io/orgs/tunnckocore/projects/a3213fd4-9f9a-46a1-a472-055c49331b92/master
+[nodesecurity-img]: https://nodesecurity.io/orgs/tunnckocore/projects/a3213fd4-9f9a-46a1-a472-055c49331b92/badge
 <!-- the original color of nsp: 
 [nodesec-img]: https://img.shields.io/badge/nsp-no_known_vulns-35a9e0.svg -->
 

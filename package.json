@@ -4,7 +4,7 @@
   "description": "Simple, small and stable helper & prompter for submitting conventional commits",
   "repository": "tunnckoCore/gitcommit",
   "author": "Charlike Mike Reagent (https://charlike.online)",
-  "nspId": "todo",
+  "nspId": "a3213fd4-9f9a-46a1-a472-055c49331b92",
   "main": "./src/index.js",
   "scripts": {
     "start": "hela",
