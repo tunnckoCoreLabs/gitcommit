@@ -8,9 +8,9 @@ _You might also be interested in [asky][highlighted-link] or in the other [relat
 
 ## Quality Assurance :100:
 
-[![bitHound Deps][bithound-code-img]][bithound-code-url] 
+[![bitHound Code][bithound-code-img]][bithound-code-url] 
 [![Code Style Standard][standard-img]][standard-url] 
-[![Linux Build][travis-img]][travis-url] 
+[![Linux Build][circleci-img]][circleci-url] 
 [![Code Coverage][codecov-img]][codecov-url] 
 [![bitHound Score][bithound-score-img]][bithound-score-url] 
 [![bitHound Deps][bithound-deps-img]][bithound-deps-url] 
@@ -23,7 +23,7 @@ You may also read the [Contributing Guide](./CONTRIBUTING.md). There, beside _"H
 [![Code Format Prettier][prettier-img]][prettier-url] 
 [![Node Security Status][nodesecurity-img]][nodesecurity-url] 
 [![Conventional Commits][ccommits-img]][ccommits-url] 
-[![Semantic Release][semantic-release-img]][semantic-release-url] 
+[![Make A Pull Request][prs-welcome-img]][prs-welcome-url] 
 [![Node Version Required][nodeversion-img]][nodeversion-url] 
 [![Renovate App Status][renovate-img]][renovate-url]
 
@@ -33,7 +33,6 @@ You may also read the [Contributing Guide](./CONTRIBUTING.md). There, beside _"H
 <p></p>
 
 [![All Contributors Spec][all-contributors-img]](#contributors) 
-[![Make A Pull Request][prs-welcome-img]][prs-welcome-url] 
 [![Newsletter Subscribe][tinyletter-img]][tinyletter-url] 
 [![PayPal Author Support][paypal-donate-img]][paypal-donate-url] 
 [![Share Love Tweet][share-love-img]][share-love-url] 
@@ -124,8 +123,8 @@ _Project scaffolded and managed with [hela][]._
 [standard-url]: https://github.com/airbnb/javascript
 [standard-img]: https://img.shields.io/badge/code_style-airbnb-brightgreen.svg
 
-[travis-url]: https://travis-ci.org/tunnckoCore/gitcommit
-[travis-img]: https://img.shields.io/travis/tunnckoCore/gitcommit/master.svg?label=linux
+[circleci-url]: https://circleci.com/gh/tunnckoCore/gitcommit/tree/master
+[circleci-img]: https://img.shields.io/circleci/project/github/tunnckoCore/gitcommit/master.svg
 
 [codecov-url]: https://codecov.io/gh/tunnckoCore/gitcommit
 [codecov-img]: https://img.shields.io/codecov/c/github/tunnckoCore/gitcommit/master.svg
@@ -151,8 +150,8 @@ _Project scaffolded and managed with [hela][]._
 [ccommits-url]: https://conventionalcommits.org/
 [ccommits-img]: https://img.shields.io/badge/conventional_commits-1.0.0-yellow.svg
 
-[semantic-release-url]: https://github.com/semantic-release/semantic-release
-[semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[prs-welcome-img]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+[prs-welcome-url]: http://makeapullrequest.com
 
 [nodeversion-url]: https://nodejs.org/en/download
 [nodeversion-img]: https://img.shields.io/node/v/gitcommit.svg
@@ -162,9 +161,6 @@ _Project scaffolded and managed with [hela][]._
 
 <!-- Third badges line (After CodeSponsor ads) -->
 [all-contributors-img]: https://img.shields.io/github/contributors/tunnckoCore/gitcommit.svg?label=all%20contributors&colorB=ffa500
-
-[prs-welcome-img]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
-[prs-welcome-url]: http://makeapullrequest.com
 
 [tinyletter-url]: https://tinyletter.com/tunnckoCore
 [tinyletter-img]: https://img.shields.io/badge/join-newsletter-9caaf8.svg
@@ -181,6 +177,6 @@ _Project scaffolded and managed with [hela][]._
 [open-issue-url]: https://github.com/tunnckoCore/gitcommit/issues/new
 
 [highlighted-link]: https://ghub.now.sh/asky
-[author-link]: https://charlike.online
+[author-link]: https://i.am.charlike.online
 
 [hela]: https://github.com/tunnckoCore/hela
