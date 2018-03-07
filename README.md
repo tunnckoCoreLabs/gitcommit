@@ -189,7 +189,7 @@ _Project automation and management with [hela][] task framework._
 
 <!-- Miscellaneous -->
 
-[share-love-url]: https://twitter.com/intent/tweet?text=https://github.com/Charlike%20Mike%20Reagent/gitcommit&via=tunnckoCore
+[share-love-url]: https://twitter.com/intent/tweet?text=https://github.com/tunnckoCore/gitcommit&via=tunnckoCore
 [share-love-img]: https://img.shields.io/badge/tweet-about-1da1f2.svg
 
 [open-issue-url]: https://github.com/tunnckoCore/gitcommit/issues/new
