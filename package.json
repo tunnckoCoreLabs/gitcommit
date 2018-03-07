@@ -59,7 +59,7 @@
   "version": "0.0.0-semantically-released",
   "repository": "tunnckoCore/gitcommit",
   "homepage": "https://github.com/Charlike Mike Reagent/gitcommit",
-  "author": "Charlike Mike Reagent (www.tunnckocore.com)",
+  "author": "Charlike Mike Reagent (http://tunnckocore.com)",
   "cdn": "./dist/index.umd.js",
   "main": "./src/index.js",
   "verb": {
