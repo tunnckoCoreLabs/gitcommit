@@ -1,7 +1,7 @@
 {
   "name": "gitcommit",
   "description": "Lightweight and joyful `git commit` replacement. Conventional Commits compliant.",
-  "nspId": "todo",
+  "nspId": "a3213fd4-9f9a-46a1-a472-055c49331b92",
   "license": "Apache-2.0",
   "licenseStart": 2018,
   "scripts": {
@@ -84,6 +84,14 @@
     },
     "lint": {
       "reflinks": true
-    }
+    },
+    "reflinks": [
+      "always-done",
+      "dezalgo",
+      "hela",
+      "new-release",
+      "once",
+      "semantic-release"
+    ]
   }
 }
