@@ -1,56 +1,46 @@
 #!/usr/bin/env node
 
 /**
- * @copyright 2017-present, Charlike Mike Reagent <olsten.larck@gmail.com>
+ * @copyright 2018-present, Charlike Mike Reagent <olsten.larck@gmail.com>
  * @license Apache-2.0
  */
 
-const asky = require('asky');
-const execa = require('execa');
-const gitcommit = require('./index.js');
+/* eslint-disable import/no-commonjs, import/no-nodejs-modules */
 
-const questions = [
-  {
-    name: 'type',
-    message: 'What is the type of the change?',
-    required: true,
-  },
-  {
-    name: 'scope',
-    message: 'What is the scope of this change?',
-    default: '*',
-    required: false,
-  },
-  {
-    name: 'subject',
-    message: 'Short description of the change:',
-    required: true,
-  },
-  {
-    name: 'body',
-    message: 'Provide longer description of the change:',
-    default: null,
-    required: false,
-  },
-];
+const process = require('process')
+const execa = require('execa')
+const mri = require('mri')
+const prompts = require('prompts')
+const dargs = require('./dargs')
+const origAliases = require('./aliases')
+const getQuestions = require('./get-questions')
+const gitcommit = require('./index')
 
-const onerror = (er) => {
-  console.error(er.message || er);
-  process.exit(1);
-};
+// Custom aliases - x, y, w. Free for now.
+const customAliases = { x: 'scope', y: 'body', w: 'footer' }
+const aliases = Object.assign({}, customAliases, origAliases)
+const argv = mri(process.argv.slice(2), { alias: aliases })
 
-const app = asky();
+/**
+ * Run.
+ */
 
-app
-  .ask(questions)
-  .then((answers) => {
-    const answer = answers.reduce((acc, x) => Object.assign({}, acc, x), {});
-    const args = gitcommit(answer);
-    const command = ['git commit']
-      .concat(process.argv.slice(2))
-      .concat(args)
-      .join(' ');
+async function run() {
+  const bannedFlags = Object.keys(customAliases).reduce(
+    (acc, key) => acc.concat(key, customAliases[key]),
+    [],
+  )
 
-    return execa.shell(command);
-  }, onerror)
-  .catch(onerror);
+  const opts = await prompts(getQuestions(argv))
+  const extra = dargs(argv, { alias: aliases, bannedFlags }).join(' ')
+  const args = gitcommit(opts)
+    .map((x) => `-m ${x}`)
+    .join(' ')
+
+  await execa.shell(`git commit --allow-empty-message ${args} ${extra}`)
+}
+
+run().catch((er) => {
+  console.error(er.message || er)
+  process.exit(1)
+})

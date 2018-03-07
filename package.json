@@ -1,48 +1,74 @@
 {
   "name": "gitcommit",
-  "version": "0.2.4",
-  "description": "Simple, small and stable helper & prompter for submitting conventional commits",
-  "repository": "tunnckoCore/gitcommit",
-  "author": "Charlike Mike Reagent (https://charlike.online)",
-  "nspId": "a3213fd4-9f9a-46a1-a472-055c49331b92",
-  "main": "./src/index.js",
-  "scripts": {
-    "start": "hela",
-    "test": "yarn start test",
-    "precommit": "yarn start precommit",
-    "commit": "yarn start commit"
-  },
+  "description": "Lightweight and joyful `git commit` replacement. Conventional Commits compliant.",
+  "nspId": "todo",
   "license": "Apache-2.0",
-  "licenseStart": 2017,
+  "licenseStart": 2018,
+  "scripts": {
+    "lint": "hela lint",
+    "test": "hela test --no-build",
+    "precommit": "yarn lint && yarn test && git add --all",
+    "commit": "node ./src/cli.js -Ss",
+    "release": "hela release --no-build",
+    "prepublishOnly": "hela protect"
+  },
   "engines": {
-    "node": ">=8",
-    "npm": ">=5",
-    "yarn": ">=1"
+    "node": ">=8.6",
+    "npm": ">=5.2",
+    "yarn": ">=1.3"
+  },
+  "dependencies": {
+    "execa": "^0.9.0",
+    "mri": "^1.1.0",
+    "prompts": "terkelg/prompts"
+  },
+  "devDependencies": {
+    "hela": "^2.0.9",
+    "hela-config-tunnckocore": "^3.0.19",
+    "mukla": "^0.4.9"
   },
   "bin": {
     "gitcommit": "./src/cli.js"
   },
   "files": [
-    "src/"
+    "src"
   ],
-  "dependencies": {
-    "asky": "0.2.2",
-    "execa": "0.8.0"
+  "eslintConfig": {
+    "extends": "tunnckocore"
   },
-  "devDependencies": {
-    "hela": "1.3.14",
-    "hela-config-tunnckocore": "2.2.2",
-    "mukla": "0.4.9"
+  "renovate": {
+    "extends": "tunnckocore"
   },
-  "keywords": [
-    "automation"
-  ],
+  "hela": {
+    "extends": "tunnckocore"
+  },
+  "nyc": {
+    "statements": 100,
+    "functions": 100,
+    "branches": 92.31,
+    "lines": 100,
+    "exclude": [
+      "test"
+    ],
+    "extension": [
+      ".js",
+      ".jsx",
+      ".mjs"
+    ]
+  },
+  "version": "0.0.0-semantically-released",
+  "repository": "tunnckoCore/gitcommit",
+  "homepage": "https://github.com/Charlike Mike Reagent/gitcommit",
+  "author": "Charlike Mike Reagent (www.tunnckocore.com)",
+  "cdn": "./dist/index.umd.js",
+  "main": "./src/index.js",
   "verb": {
     "run": true,
     "toc": {
       "render": true,
       "method": "preWrite",
-      "maxdepth": 3
+      "maxdepth": 3,
+      "footer": ""
     },
     "layout": "empty",
     "tasks": [
@@ -50,19 +76,14 @@
     ],
     "related": {
       "list": [
-        "asky",
-        "p-map-series",
-        "execa",
-        "hela"
+        "try-catch-core",
+        "new-release",
+        "hela-config-tunnckocore"
       ],
-      "highlight": "asky"
+      "highlight": "prompts"
     },
     "lint": {
       "reflinks": true
-    },
-    "reflinks": []
-  },
-  "release": {
-    "analyzeCommits": "simple-commit-message"
+    }
   }
 }

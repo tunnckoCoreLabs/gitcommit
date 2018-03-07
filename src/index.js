@@ -1,25 +1,36 @@
 /**
- * @copyright 2017-present, Charlike Mike Reagent <olsten.larck@gmail.com>
+ * @copyright 2018-present, Charlike Mike Reagent <olsten.larck@gmail.com>
  * @license Apache-2.0
  */
 
-module.exports = function gitcommit (opts) {
-  const answer = Object.assign(
-    {
-      type: 'fix',
-      scope: '*',
-      subject: '',
-      body: null,
-    },
-    opts
-  );
+/* eslint-disable import/no-commonjs */
 
-  const header = `${answer.type}(${answer.scope}): ${answer.subject}`;
-  const body = answer.body ? ['-m', JSON.stringify(answer.body)] : null;
-  const args = []
-    .concat('-m', JSON.stringify(header))
-    .concat(body)
-    .filter(Boolean);
+module.exports = (options) => {
+  const opts = Object.assign({}, options)
+  const { type, subject, body } = opts
 
-  return args;
-};
+  if (!isValid(type) || !isValid(subject)) {
+    throw new Error('gitcommit: options.type and options.subject required')
+  }
+
+  const scope = isValid(opts.scope) ? `(${opts.scope})` : ''
+  const header = JSON.stringify(`${type}${scope}: ${subject.replace(/\.$/, '')}`)
+
+  let args = [header]
+
+  if (isValid(body)) {
+    // empty line before the body
+    args = args.concat('""', JSON.stringify(body))
+  }
+
+  if (isValid(opts.footer)) {
+    // empty line before the footer
+    args = args.concat('""', JSON.stringify(opts.footer))
+  }
+
+  return args
+}
+
+function isValid(val) {
+  return val && typeof val === 'string' && val.length > 0
+}
