@@ -134,7 +134,7 @@ If you or your organization are using this project, consider adding yourself to 
 
 ## License
 
-Copyright (c) 2018-present, [Charlike Mike Reagent][author-link] `<olsten.larck@gmail.com>`.  
+Copyright (c) 2017-present, [Charlike Mike Reagent][author-link] `<olsten.larck@gmail.com>`.  
 Released under the [Apache-2.0 License][license-url].
 
 ---

@@ -3,12 +3,13 @@
   "description": "Lightweight and joyful `git commit` replacement. Conventional Commits compliant.",
   "nspId": "a3213fd4-9f9a-46a1-a472-055c49331b92",
   "license": "Apache-2.0",
-  "licenseStart": 2018,
+  "licenseStart": 2017,
   "scripts": {
     "lint": "hela lint",
     "test": "hela test --no-build",
     "precommit": "yarn lint && yarn test && git add --all",
     "commit": "node ./src/cli.js",
+    "commit-dry": "git add --all && node ./src/cli.js",
     "release": "hela release --no-build",
     "prepublishOnly": "hela protect"
   },

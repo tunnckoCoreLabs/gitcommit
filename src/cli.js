@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @copyright 2018-present, Charlike Mike Reagent <olsten.larck@gmail.com>
+ * @copyright 2017-present, Charlike Mike Reagent <olsten.larck@gmail.com>
  * @license Apache-2.0
  */
 
