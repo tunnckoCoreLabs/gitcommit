@@ -8,7 +8,7 @@
     "lint": "hela lint",
     "test": "hela test --no-build",
     "precommit": "yarn lint && yarn test && git add --all",
-    "commit": "node ./src/cli.js -Ss",
+    "commit": "node ./src/cli.js",
     "release": "hela release --no-build",
     "prepublishOnly": "hela protect"
   },

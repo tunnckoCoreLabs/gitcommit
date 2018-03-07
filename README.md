@@ -51,7 +51,48 @@ Project is [semantically](https://semver.org) & automatically released on [Circl
 This project requires [**Node.js**][nodeversion-url] **v8.6** or above. Install it using [**yarn**](https://yarnpkg.com) **v1.3+** or [**npm**](https://www.npmjs.com) **v5.2+** package managers.
 
 ```
-$ yarn add gitcommit --dev
+$ yarn add gitcommit
+```
+
+Or install it globally and for example run `gitcommit --scope`. It will prompt you with questions
+for commit type, commit scope and commit subject (short description). The type and subject questions are required always, so you can't skip them.
+
+```
+$ yarn global add gitcommit
+```
+
+All `git commit` flags are available too.
+
+```
+# -s is --signoff, -S is --gpg-sign
+$ gitcommit -S -s --scope --body --footer
+
+# equivalent of above is following
+# where -x is --scope, -y is --body and -w is --footer
+$ gitcommit -Ssxyw
+```
+
+Above command will GPG Sign commit, add `Sign-off-by` at the end line, prompt
+for commit scope, body and footer. Consider we commit breaking change.
+
+```
+$ gitcommit -Ssxyw
+? Select the type of this change ›
+❯  fix:   A bug fix
+   feat:  New feature
+   major: Breaking change
+   chore: Non src or test files changes
+   docs:  Documentation only changes
+✔ What is the scope of this change? … refactor
+✔ Short, imperative tense description … huge api change
+✔ Longer description (or fixes #17423, closes #33) … some pretty long body description.
+✔ List issues or PRs (e.g. fixes #1771, resolves #371) … fixes #33, resolves #511
+```
+
+The actual `git command` which will be executed is like
+
+```
+$ git commit -S -s --allow-empty-message -m "major(refactor): huge api change" -m "" -m "some pretty long body description." -m "" -m "fixes #33, closes #511"
 ```
 
 <!-- 
