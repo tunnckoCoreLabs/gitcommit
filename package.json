@@ -19,7 +19,7 @@
     "yarn": ">=1.3"
   },
   "dependencies": {
-    "execa": "^0.9.0",
+    "execa": "^0.10.0",
     "mri": "^1.1.0",
     "prompts": "terkelg/prompts"
   },
