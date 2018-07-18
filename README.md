@@ -8,13 +8,11 @@ _You might also be interested in [prompts][highlighted-link] or in the other [re
 
 ## Quality Assurance :100:
 
-[![bitHound Code][bithound-code-img]][bithound-code-url]
 [![Code Style Standard][standard-img]][standard-url]
 [![Linux Build][circleci-img]][circleci-url]
 [![Code Coverage][codecov-img]][codecov-url]
-[![bitHound Score][bithound-score-img]][bithound-score-url]
-[![bitHound Deps][bithound-deps-img]][bithound-deps-url]
 [![Dependencies Status][dependencies-img]][dependencies-url]
+[![Renovate App Status][renovate-img]][renovate-url]
 
 If you have any _how-to_ kind of questions, please read [Code of Conduct](./CODE_OF_CONDUCT.md) and **ping me on [twitter](https://twitter.com/tunnckoCore)** or [open an issue][open-issue-url].  
 You may also read the [Contributing Guide](./CONTRIBUTING.md). There, beside _"How to contribute?"_, we describe everything **_stated_** by the badges.
@@ -24,7 +22,6 @@ You may also read the [Contributing Guide](./CONTRIBUTING.md). There, beside _"H
 [![Node Security Status][nodesecurity-img]][nodesecurity-url]
 [![Conventional Commits][ccommits-img]][ccommits-url]
 [![Semantically Released][new-release-img]][new-release-url]
-[![Renovate App Status][renovate-img]][renovate-url]
 
 Project is [semantically](https://semver.org) & automatically released on [CircleCI][codecov-url] with [new-release][] and its [New Release](https://github.com/apps/new-release) Github Bot.
 
