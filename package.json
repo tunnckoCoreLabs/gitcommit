@@ -21,7 +21,7 @@
   "dependencies": {
     "execa": "^1.0.0",
     "mri": "^1.1.0",
-    "prompts": "^0.1.13"
+    "prompts": "^1.0.0"
   },
   "devDependencies": {
     "hela": "^2.0.9",
