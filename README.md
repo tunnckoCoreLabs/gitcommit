@@ -151,33 +151,24 @@ _Project automation and management with [hela][] task framework._
 [npmv-url]: https://www.npmjs.com/package/gitcommit
 [npmv-img]: https://img.shields.io/npm/v/gitcommit.svg?label=npm%20version
 
-[github-release-url]: https://github.com/tunnckoCore/gitcommit/releases/latest
-[github-release-img]: https://img.shields.io/github/release/tunnckoCore/gitcommit.svg?label=github%20release
+[github-release-url]: https://github.com/tunnckoCoreLabs/gitcommit/releases/latest
+[github-release-img]: https://img.shields.io/github/release/tunnckoCoreLabs/gitcommit.svg?label=github%20release
 
-[license-url]: https://github.com/tunnckoCore/gitcommit/blob/master/LICENSE
+[license-url]: https://github.com/tunnckoCoreLabs/gitcommit/blob/master/LICENSE
 [license-img]: https://img.shields.io/badge/license-Apache%202.0-blue.svg
 
 <!-- [license-img]: https://img.shields.io/badge/license-tunnckoCore_1%2E0-blue.svg -->
 
 <!-- Front line badges -->
 
-[bithound-score-url]: https://www.bithound.io/github/tunnckoCore/gitcommit
-[bithound-score-img]: https://www.bithound.io/github/tunnckoCore/gitcommit/badges/score.svg
-
-[bithound-code-url]: https://www.bithound.io/github/tunnckoCore/gitcommit
-[bithound-code-img]: https://www.bithound.io/github/tunnckoCore/gitcommit/badges/code.svg
-
 [standard-url]: https://github.com/airbnb/javascript
 [standard-img]: https://img.shields.io/badge/code_style-airbnb-brightgreen.svg
 
-[circleci-url]: https://circleci.com/gh/tunnckoCore/gitcommit/tree/master
-[circleci-img]: https://img.shields.io/circleci/project/github/tunnckoCore/gitcommit/master.svg
+[circleci-url]: https://circleci.com/gh/tunnckoCoreLabs/gitcommit/tree/master
+[circleci-img]: https://img.shields.io/circleci/project/github/tunnckoCoreLabs/gitcommit/master.svg
 
-[codecov-url]: https://codecov.io/gh/tunnckoCore/gitcommit
-[codecov-img]: https://img.shields.io/codecov/c/github/tunnckoCore/gitcommit/master.svg
-
-[bithound-deps-url]: https://www.bithound.io/github/tunnckoCore/gitcommit/dependencies/npm
-[bithound-deps-img]: https://www.bithound.io/github/tunnckoCore/gitcommit/badges/dependencies.svg
+[codecov-url]: https://codecov.io/gh/tunnckoCoreLabs/gitcommit
+[codecov-img]: https://img.shields.io/codecov/c/github/tunnckoCoreLabs/gitcommit/master.svg
 
 [dependencies-url]: https://david-dm.org/tunnckoCore/gitcommit
 [dependencies-img]: https://img.shields.io/david/tunnckoCore/gitcommit.svg
