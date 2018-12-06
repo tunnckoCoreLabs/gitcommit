@@ -1717,9 +1717,9 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
-kleur@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/kleur/-/kleur-2.0.1.tgz#7cc64b0d188d0dcbc98bdcdfdda2cc10619ddce8"
+kleur@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.0.tgz#ae185c2e0641ffb2f8e3d182df13239df9d8d3b2"
 
 latest-version@3.1.0:
   version "3.1.0"
@@ -2250,11 +2250,11 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prompts@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/prompts/-/prompts-1.1.0.tgz#8a8b33030943e8355e06f81bebc436f7aa669d42"
+prompts@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/prompts/-/prompts-2.0.0.tgz#d36c6c044ea58825c9f531949e30f9e8bd39a29e"
   dependencies:
-    kleur "^2.0.1"
+    kleur "^3.0.0"
     sisteransi "^1.0.0"
 
 prop-types@^15.6.0:
