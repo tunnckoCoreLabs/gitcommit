@@ -24,7 +24,7 @@
     "prompts": "^2.0.0"
   },
   "devDependencies": {
-    "hela": "^2.0.9",
+    "hela": "^3.0.0",
     "hela-config-tunnckocore": "^3.0.19",
     "mukla": "^0.4.9"
   },
